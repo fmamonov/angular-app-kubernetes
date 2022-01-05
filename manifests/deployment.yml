@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "eulucydev01-b78f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "eulucydev01-b78f"
+  template:
+    metadata:
+      labels:
+        app: "eulucydev01-b78f"
+    spec:
+      containers:
+        - name: "eulucydev01-b78f"
+          image: "eulucydev01.azurecr.io/eulucydev01"
+          ports:
+          - containerPort: 80
